@@ -18,7 +18,7 @@ h1, p{
 .header{
     color: rgba(255, 255, 255, .5);
     background-color: rgba(0, 0, 0, .75);
-    padding: 30px;
+    padding: 20px;
     width: 100%;
     text-align: center;
 }
@@ -43,7 +43,13 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button{
@@ -60,6 +66,13 @@ button{
 button:hover{
     color: rgba(0, 0, 0, .5);
     background: rgba(255, 255, 255, .5);
+}
+.delete{
+    padding: 5px;
+    background: rgba(255, 0, 0, .75);
+}
+.delete:hover{
+    background: rgba(255, 0, 0, .85);
 }
 .input{
     color: rgba(0, 0, 0, .5);
@@ -81,6 +94,31 @@ label{
 }
 
 .checkbox{
-    margin: 15px auto;
-    position: relative;
+    height: 25px;
+    width: 25px;
+}
+.checkboxes label {
+    display: inline-block;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+.checkboxes input {
+    vertical-align: middle;
+}
+.checkboxes label span {
+    vertical-align: middle;
+}
+
+@media(max-width: 500px){
+    .input, button, p{
+        padding: 5px;
+        font-size: 10px;
+    }
+    label{
+        font-size: 10px;        
+    }
+    .checkbox{
+        height: 15px;
+        width: 15px;
+    }
 }

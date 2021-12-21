@@ -11,10 +11,9 @@ export default function ToDo({todo, toggleTodo, deleteTodo}) {
     }
 
     return (
-        <div>
-            <input className='checkbox' onChange={handleToggleTodo} type='checkbox' checked={todo.complete} />
-            <label>{todo.name}</label>
-            <button onClick={handleDeleteTodo}>Delete</button>
+        <div className='checkboxes'>
+            <label htmlFor={todo.name}><input className='checkbox' onChange={handleToggleTodo} type='checkbox' checked={todo.complete} id={todo.name}/><span>{todo.name}</span></label>
+            <button className='delete' onClick={handleDeleteTodo}>Delete</button>
         </div>
     )
 }

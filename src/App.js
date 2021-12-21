@@ -32,7 +32,8 @@ function App() {
 
   function handleAddTodo(){
     const name=todoNameRef.current.value.trim();
-    if(name==='') return;
+    const alreadyThere=todos.find(todo => todo.name.toLowerCase()===name.toLowerCase());
+    if(name==='' || alreadyThere) return;
     setTodos([...todos, { id: uuidv4(), name: name, complete: false}])
     todoNameRef.current.value=null;
   }
@@ -53,11 +54,11 @@ function App() {
         <a href='https://github.com/abhishekbatra1062k/'>Made By Abhishek Batra</a>
       </div>
       <ToDoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
-      <div>
+      <div className='task'>
         <input className='input' ref={todoNameRef} type='text' placeholder='Enter Task'></input>
         <button onClick={handleAddTodo}>Add</button>
-        <p>{todos.filter(todo => !todo.complete).length} left to do!</p>
-      </div>
+      </div>  
+      <p>{todos.filter(todo => !todo.complete).length} left to do!</p>
       <div>
         <button onClick={handleDeleteCompletedTodos}>Delete Completed</button>
         <button onClick={handleDeleteAll}>Delete All</button>
