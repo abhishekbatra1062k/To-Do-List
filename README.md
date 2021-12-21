@@ -15,4 +15,4 @@ ToDo list is a simple web application to save Your daily tasks in order not to m
 * JavaScript
 * React
 
-### [DEMO](./src/images/ss.jpg)
+### DEMO(./src/images/ss.jpg)
