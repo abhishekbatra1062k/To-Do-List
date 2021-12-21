@@ -16,4 +16,4 @@ ToDo list is a simple web application to save Your daily tasks in order not to m
 * React
 
 ### SCREENSHOT
-![SCREENSHOT](./src/images/ss.jpg)
+![SCREENSHOT](./src/images/ss.JPG)
